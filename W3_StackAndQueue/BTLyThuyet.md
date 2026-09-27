@@ -2,23 +2,23 @@
 **a. Bắt đầu từ một queue rỗng, chuỗi sau sẽ in ra nội dung gì??
 enqueue(0), enqueue(1), dequeue(), enqueue(2), enqueue(3), dequeue(), enqueue(4), enqueue(5), dequeue(), enqueue(6), enqueue(7), dequeue()**
 
-enqueue(0) -> [0] ; enqueue(1) -> [0 1]; dequeue() -> [0] 
+enqueue(0) -> [0] ; enqueue(1) -> [0 1]; dequeue() -> [1] 
 
--> Output: 0
+-> Output: 1
 
-enqueue(2) -> [0 2]; enqueue(3) -> [0 2 3]; dequeue() -> [0 2] 
+enqueue(2) -> [1 2]; enqueue(3) -> [1 2 3]; dequeue() -> [2 3] 
 
--> Output: 0 2
+-> Output: 2 3
 
-enqueue(4) -> [0 2 4]; enqueue(5) -> [0 2 4 5]; dequeue() -> [0 2 4] 
+enqueue(4) -> [2 3 4]; enqueue(5) -> [2 3 4 5]; dequeue() -> [3 4 5] 
 
--> Output: 0 2 4
+-> Output: 3 4 5
 
-enqueue(6) -> [0 2 4 6]; enqueue(7) -> [0 2 4 6 7]; dequeue() -> [0 2 4 6] 
+enqueue(6) -> [3 4 5 6]; enqueue(7) -> [3 4 5 6 7]; dequeue() -> [4 5 6 7] 
 
--> Output: 0 2 4 6
+-> Output: 4 5 6 7
 
-Sau khi chạy hết các lệnh, output cuối cùng sẽ là tổng của các output riêng lẻ -> Output cuối cùng là: **0 0 2 0 2 4 0 2 4 6**
+Sau khi chạy hết các lệnh, output cuối cùng sẽ là tổng của các output riêng lẻ -> Output cuối cùng là: **1 2 3 3 4 5 4 5 6 7**
 
 **(b) Thao tác enqueue của self-printing queue chứa n phần tử có thời gian chạy trong trường hợp tồi nhất là loại nào?**
 
