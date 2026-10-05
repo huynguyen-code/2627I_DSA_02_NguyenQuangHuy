@@ -56,7 +56,7 @@ public class Java_Sort {
     static void insertionSort(List<Student> list) {
         for (int i = 1; i < list.size(); i++) {
             Student temp = list.get(i);
-            int j = i - 1;
+            int j = i - 1;  
             while (j >= 0 && comesBefore(temp, list.get(j))) {
                 list.set(j + 1, list.get(j));
                 j--;
