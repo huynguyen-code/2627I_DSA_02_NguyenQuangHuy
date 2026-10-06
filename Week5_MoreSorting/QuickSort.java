@@ -37,7 +37,7 @@ class Quicksort {
 
 class Main1 {
     public static void main(String args[]) {
-        int[] data = { 8, 7, 2, 1, 0, 9, 6 };
+        int[] data = { 8, 7, 6, 1, 0, 9, 2};
         System.out.println("Initial array: " + Arrays.toString(data));
 
         int size = data.length;
