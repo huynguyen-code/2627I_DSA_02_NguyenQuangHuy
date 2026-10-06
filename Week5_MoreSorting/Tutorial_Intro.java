@@ -22,13 +22,20 @@ class Result_51 {
      */
 
     public static int introTutorial(int V, List<Integer> arr) {
-        for(int i = 0; i < arr.size(); i++) {
-            if(arr.get(i) == V) {
-                return i;
-            }
-        }
-        return -1; // Return -1 if V is not found
+        int low = 0;
+        int high = (arr.size() - 1);
+        while (low <= high) {
+            int mid = low + (high-low) / 2;
 
+            if (V == arr.get(mid))
+                return mid;
+
+            if (V > arr.get(mid))
+                low = mid + 1;
+            else
+                high = mid - 1;
+        }
+        return -1;
     }
 
 }
